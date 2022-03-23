@@ -61,7 +61,7 @@ function Register() {
         // }
         // console.log(item)
         let token = localStorage.getItem('token')
-        axios.post(`http://localhost:9090/add`, FD,{ headers:{'x-access-token':token}}).then((res) => {
+        axios.post(`http://localhost:9090`, FD,{ headers:{'x-access-token':token}}).then((res) => {
         })
         history.push('/Table')
         setOpen(true);

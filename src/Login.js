@@ -27,13 +27,14 @@ const Login = () => {
             password:values.password
         }
         console.log(item)
+        
         axios.post("http://localhost:9090/login",item).then((res) => {
-           localStorage.setItem("token", res.data.token)
-        //     if(res.data.success) {
-        //     }
-        //     console.log("updare", res)
+            localStorage.setItem('token', res.data.token);
+            // if(res.data.success=== true) {
+            // }
+            // console.log("updare", res)
         })
-        // history.push('/table')
+        history.push('/Table')
     }
    
 
@@ -107,7 +108,7 @@ const Login = () => {
                     <br />
                    
               <Grid align='center'>
-                     <Button type='submit' onClick={postData} ><Link to ='/Table'>Submit</Link></Button>
+                     <Button type='submit' onClick={postData} ><Link to='/Table'>Submit</Link></Button>
               </Grid>
               <br/>
               <Grid>
